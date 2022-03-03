@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './styles.css';
 
 type Props = {
   imguri: string;
@@ -12,10 +12,10 @@ type Props = {
 const Card = (props: Props) => {
   return (
     <div className="card">
-      <div className="card--img">
+      <div className="card__img">
         <img src={props.imguri} alt="Logo" />
       </div>
-      <div className="card--body">
+      <div className="card__body">
         <h4>{props.title}</h4>
         <p>MOQ {props.moq} Units</p>
         <p>

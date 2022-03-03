@@ -9,7 +9,7 @@
   border-radius: 4px;
 }
 
-.card--img {
+.card__img {
   width: inherit;
   aspect-ratio: 1 / 1;
   background: linear-gradient(138.97deg, #f2f5fc 0%, #f1f1fa 151.78%);
@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.card--body {
+.card__body {
   padding-top: 14px;
   padding-bottom: 17px;
   padding-left: 19px;
@@ -30,7 +30,7 @@
   /* background: pink; */
 }
 
-.card--body h4 {
+.card__body h4 {
   /* padding: 4px 0 4px 0; */
   /* font-size: 18px; */
   color: #201c49;
@@ -41,7 +41,7 @@
   font-weight: 600;
 }
 
-.card--body p {
+.card__body p {
   color: #979797;
   font-size: 12px;
 }

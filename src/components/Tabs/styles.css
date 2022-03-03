@@ -1,0 +1,37 @@
+.tab {
+  padding-left: 0;
+}
+
+.tab ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-bar button {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  width: 160px;
+  height: 48px;
+  margin: -1px;
+  background: #fff;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+  font-size: 12px;
+}
+
+.tab-bar-active {
+  background-color: white;
+  border: solid #fff;
+  border-width: 1px 1px 0 1px;
+
+  color: #4589ff;
+}
+
+.tab-bar-active button {
+  border-top: 3px solid #4589ff;
+  color: #4589ff;
+  font-weight: 700;
+}
