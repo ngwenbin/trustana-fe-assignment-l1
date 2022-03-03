@@ -1,0 +1,83 @@
+{
+    "catalog_count": 3,
+    "catalog" : [
+        {
+            "prod_group" : "Korean products",
+            "items" : [
+                {
+                    "prod_name" : "Product 1",
+                    "img" : "/product_image/bbq-paste.png",
+                    "moq" : 20,
+                    "price" : 4.50,
+                    "unit" : "carton"
+                },
+                {
+                    "prod_name" : "Product 2",
+                    "img" : "/product_image/hot-pepper-paste.png",
+                    "moq" : 20,
+                    "price" : 4.50,
+                    "unit" : "carton"
+                },
+                {
+                    "prod_name" : "Product 3",
+                    "img" : "/product_image/spicy-bbq-paste.png",
+                    "moq" : 20,
+                    "price" : 4.50,
+                    "unit" : "carton"
+                }
+            ]
+        },
+        {
+            "prod_group" : "Chinese products",
+            "items" : [
+                {
+                    "prod_name" : "Product 1",
+                    "img" : "",
+                    "moq" : 10,
+                    "price" : 3.50,
+                    "unit" : "carton"
+                },
+                {
+                    "prod_name" : "Product 2",
+                    "img" : "",
+                    "moq" : 10,
+                    "price" : 3.50,
+                    "unit" : "carton"
+                },
+                {
+                    "prod_name" : "Product 3",
+                    "img" : "",
+                    "moq" : 10,
+                    "price" : 3.50,
+                    "unit" : "carton"
+                }
+            ]
+        },
+        {
+            "prod_group" : "Japanese products",
+            "items" : [
+                {
+                    "prod_name" : "Product 1",
+                    "img" : "",
+                    "moq" : 5,
+                    "price" : 2.50,
+                    "unit" : "carton"
+                },
+                {
+                    "prod_name" : "Product 2",
+                    "img" : "",
+                    "moq" : 5,
+                    "price" : 2.50,
+                    "unit" : "carton"
+                },
+                {
+                    "prod_name" : "Product 3",
+                    "img" : "",
+                    "moq" : 5,
+                    "price" : 2.50,
+                    "unit" : "carton"
+                }
+            ]
+        }
+    ]
+}
