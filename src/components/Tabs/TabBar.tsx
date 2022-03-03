@@ -9,17 +9,16 @@ type Props = {
 };
 
 const TabBar = (props: Props) => {
-  let className = 'tab-bar';
-  if (props.index == props.active) {
-    className += ' tab-bar-active';
-  }
+  const className = props.index == props.active ? 'tab-bar__items--active' : '';
 
   return (
-    <li className={className}>
-      <button onClick={() => props.setActive(props.index)}>
-        {props.tabName}
-      </button>
-    </li>
+    <div className="tab-bar">
+      <li className={className}>
+        <button onClick={() => props.setActive(props.index)}>
+          {props.tabName}
+        </button>
+      </li>
+    </div>
   );
 };
 

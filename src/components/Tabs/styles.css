@@ -17,21 +17,14 @@
   height: 48px;
   margin: -1px;
   background: #fff;
-  border: solid #ccc;
-  border-width: 1px 1px 0 1px;
   font-size: 12px;
+  border: solid #ccc;
+  border-width: 1px;
 }
 
-.tab-bar-active {
-  background-color: white;
-  border: solid #fff;
-  border-width: 1px 1px 0 1px;
-
-  color: #4589ff;
-}
-
-.tab-bar-active button {
-  border-top: 3px solid #4589ff;
+.tab-bar__items--active button {
+  border-top-color: #4589ff;
+  border-width: 3px 1px 0px 1px;
   color: #4589ff;
   font-weight: 700;
 }
