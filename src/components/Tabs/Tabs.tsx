@@ -12,20 +12,22 @@ const Tabs = (props: Props) => {
 
   return (
     <div className="tab">
-      <ul>
-        {props.children.map((item, index) => (
-          <TabBar
-            key={index}
-            tabName={item.props.title}
-            index={index}
-            active={activeTab}
-            setActive={setactiveTab}
-          />
-        ))}
-        <div className="tab__img">
-          <img src={trustana_logo} />
-        </div>
-      </ul>
+      <div className="tab-bar">
+        <ul className="tab-bar__list">
+          {props.children.map((item, index) => (
+            <TabBar
+              key={index}
+              tabName={item.props.title}
+              index={index}
+              active={activeTab}
+              setActive={setactiveTab}
+            />
+          ))}
+          <div className="tab__img">
+            <img src={trustana_logo} />
+          </div>
+        </ul>
+      </div>
       {props.children[activeTab]}
     </div>
   );

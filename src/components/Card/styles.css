@@ -32,12 +32,9 @@
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
-  /* background: pink; */
 }
 
 .card__body h4 {
-  /* padding: 4px 0 4px 0; */
-  /* font-size: 18px; */
   color: #201c49;
   width: 200px;
   white-space: nowrap;

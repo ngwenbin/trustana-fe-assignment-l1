@@ -1,4 +1,4 @@
-import React, { SetStateAction } from 'react';
+import React from 'react';
 import './styles.css';
 
 type Props = {
@@ -12,13 +12,13 @@ const TabBar = (props: Props) => {
   const className = props.index == props.active ? 'tab-bar__items--active' : '';
 
   return (
-    <div className="tab-bar">
+    <>
       <li className={className}>
         <button onClick={() => props.setActive(props.index)}>
           {props.tabName}
         </button>
       </li>
-    </div>
+    </>
   );
 };
 
