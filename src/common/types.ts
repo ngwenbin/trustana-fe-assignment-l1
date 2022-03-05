@@ -17,11 +17,11 @@ export interface MockData {
 }
 
 export interface spaceXSitesData {
-  launch_date: number;
+  launch_date_unix: string;
   mission_name: string;
   rocket: { rocket_name: string };
   launch_site: { site_name: string };
-  links: { images: [string] };
+  links: { flickr_images: [string | undefined] };
 }
 
 export interface spaceXSite {

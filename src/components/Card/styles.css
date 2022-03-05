@@ -24,6 +24,12 @@
   align-items: center;
 }
 
+.card__img img {
+  width: inherit;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 .card__body {
   padding-top: 14px;
   padding-bottom: 17px;

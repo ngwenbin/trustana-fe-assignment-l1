@@ -4,7 +4,7 @@ import TabBar from './TabBar';
 import trustana_logo from '../../assets/images/Logo.png';
 
 type Props = {
-  children: ReactElement[];
+  children?: ReactElement[];
 };
 
 const Tabs = (props: Props) => {
@@ -14,7 +14,7 @@ const Tabs = (props: Props) => {
     <div className="tab">
       <div className="tab-bar">
         <ul className="tab-bar__list">
-          {props.children.map((item, index) => (
+          {props.children?.map((item, index) => (
             <TabBar
               key={index}
               tabName={item.props.title}
@@ -28,7 +28,7 @@ const Tabs = (props: Props) => {
           </div>
         </ul>
       </div>
-      {props.children[activeTab]}
+      {props.children && props.children[activeTab]}
     </div>
   );
 };

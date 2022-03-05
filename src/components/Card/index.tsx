@@ -1,19 +1,24 @@
 import React from 'react';
-import { MockItem } from '../../common/types';
+import { spaceXSitesData } from '../../common/types';
 import './styles.css';
+import spacexlogo from '../../assets/images/spacex.png';
 
-const Card = (props: MockItem) => {
+const Card = (props: spaceXSitesData) => {
   return (
     <div className="card">
       <div className="card__img">
-        <img src={props.img} alt="Logo" />
+        <img
+          src={
+            props.links.flickr_images.length
+              ? props.links.flickr_images[0]
+              : spacexlogo
+          }
+        />
       </div>
       <div className="card__body">
-        <h4>{props.prod_name}</h4>
-        <p>MOQ {props.moq} Units</p>
-        <p>
-          SGD {props.price.toFixed(2)} /{props.unit}
-        </p>
+        <h4>{props.mission_name}</h4>
+        <p>Rocket: {props.rocket.rocket_name}</p>
+        <p>Datetime: {props.launch_date_unix}</p>
       </div>
     </div>
   );

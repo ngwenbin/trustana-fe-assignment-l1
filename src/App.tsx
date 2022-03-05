@@ -3,37 +3,41 @@ import './App.css';
 import Tabs from './components/Tabs';
 import Tab from './components/Tabs/Tab';
 import fetchData from './services/fetchData';
-import mockdata from './data/mockdata.json';
-import { MockData, spaceXSite, spaceXGQLtemplate } from './common/types';
-
-const getData = () => JSON.parse(JSON.stringify(mockdata));
+import { spaceXSite, spaceXGQLtemplate } from './common/types';
 
 const reqtemplate: spaceXGQLtemplate[] = [
   {
     alias: 'site_1',
     site_name: 'CCAFS SLC 40',
-    qty: 2
+    qty: 10
   },
   {
     alias: 'site_2',
     site_name: 'VAFB SLC 4E',
-    qty: 5
+    qty: 10
   },
   {
     alias: 'site_3',
     site_name: 'KSC LC 39A',
-    qty: 6
+    qty: 10
   }
 ];
 
 function App() {
   const [gqlData, setgqlData] = useState<spaceXSite[] | undefined>(undefined);
-  const [isLoading, setisLoading] = useState<boolean>(false);
-  const data: MockData = getData();
+  const [isLoading, setisLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetchData(reqtemplate).then((res) => {
       const val = Object.values(res.data);
+      val.map((items) =>
+        items.data.map((launchdata) => {
+          const date = parseInt(launchdata.launch_date_unix);
+          const dateObj = new Date(date * 1000);
+          launchdata.launch_date_unix = dateObj.toLocaleString();
+        })
+      );
+      console.log('load');
       setgqlData(val);
       setisLoading(false);
     });
@@ -46,9 +50,11 @@ function App() {
           <strong>Loading...</strong>
         ) : (
           <Tabs>
-            {data.catalog.map((items) => (
-              <Tab title={items.prod_group} key={items.prod_group}>
-                {items.items}
+            {gqlData?.map((items, index) => (
+              <Tab
+                title={reqtemplate[index].site_name}
+                key={reqtemplate[index].site_name}>
+                {items.data}
               </Tab>
             ))}
           </Tabs>

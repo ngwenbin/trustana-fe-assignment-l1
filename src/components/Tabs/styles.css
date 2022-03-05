@@ -6,7 +6,7 @@
 .tab-bar__list {
   list-style: none;
   display: flex;
-  width: 100vw;
+  width: 99vw;
   flex-direction: row;
   background: #fbfcff;
   border-bottom: 1px solid #ccc;
@@ -43,7 +43,7 @@
 
 .tab-bar__items--active button {
   border-top-color: #4589ff;
-  border-width: 3px 1px 0px 1px;
+  border-width: 3px 1px 1px 1px;
   color: #4589ff;
   font-weight: 700;
 }
@@ -68,7 +68,7 @@
 .tab-body__cards {
   padding-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
+  grid-template-columns: repeat(auto-fit, 240px);
   gap: 42px;
 }
 
