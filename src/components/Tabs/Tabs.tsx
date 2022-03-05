@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import './styles.css';
 import TabBar from './TabBar';
+import trustana_logo from '../../assets/images/Logo.png';
 
 type Props = {
   children: ReactElement[];
@@ -21,6 +22,9 @@ const Tabs = (props: Props) => {
             setActive={setactiveTab}
           />
         ))}
+        <div className="tab__img">
+          <img src={trustana_logo} />
+        </div>
       </ul>
       {props.children[activeTab]}
     </div>

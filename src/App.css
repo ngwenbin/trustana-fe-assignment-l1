@@ -17,10 +17,10 @@ h4 {
   display: flex;
   background: #d6d8df;
   min-height: 100vh;
-  padding: 20px;
 }
 
 .container {
   background: #ffffff;
   flex-grow: 1;
+  margin: 20px;
 }
