@@ -7,7 +7,6 @@ type Props = {
   title: string;
   children: MockItem[];
 };
-
 const Tab = (props: Props) => {
   return (
     <div className="tab-body">
@@ -17,8 +16,8 @@ const Tab = (props: Props) => {
         {props.children.map((item) => (
           <Card
             key={item.prod_name}
-            imguri={item.img}
-            title={item.prod_name}
+            img={item.img}
+            prod_name={item.prod_name}
             moq={item.moq}
             price={item.price}
             unit={item.unit}

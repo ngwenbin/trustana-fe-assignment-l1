@@ -1,5 +1,6 @@
 .tab {
   padding-left: 0;
+  align-self: flex-start;
 }
 
 .tab-bar__list {

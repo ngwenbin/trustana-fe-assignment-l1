@@ -1,22 +1,15 @@
 import React from 'react';
+import { MockItem } from '../../common/types';
 import './styles.css';
 
-type Props = {
-  imguri: string;
-  title: string;
-  moq: number;
-  price: number;
-  unit: string;
-};
-
-const Card = (props: Props) => {
+const Card = (props: MockItem) => {
   return (
     <div className="card">
       <div className="card__img">
-        <img src={props.imguri} alt="Logo" />
+        <img src={props.img} alt="Logo" />
       </div>
       <div className="card__body">
-        <h4>{props.title}</h4>
+        <h4>{props.prod_name}</h4>
         <p>MOQ {props.moq} Units</p>
         <p>
           SGD {props.price.toFixed(2)} /{props.unit}
