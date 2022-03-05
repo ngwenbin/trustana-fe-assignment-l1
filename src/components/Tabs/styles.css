@@ -36,3 +36,27 @@
   color: #4589ff;
   font-weight: 700;
 }
+
+.tab-body {
+  padding: 70px 0 10px 50px;
+}
+
+.tab-body__category {
+  color: #8b8b8b;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.25px;
+}
+
+.tab-body__title {
+  color: #203b69;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tab-body__cards {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 42px;
+}
