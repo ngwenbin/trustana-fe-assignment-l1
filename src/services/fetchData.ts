@@ -7,6 +7,11 @@ const headers = {
   Authorization: '<token>'
 };
 
+/**
+ *
+ * @param props spaceXGQLtemplate Object
+ * @returns GraphQL query string
+ */
 const createQuery = (props: spaceXGQLtemplate) => {
   return `${props.alias}: launchesPastResult(find: {site_name: "${props.site_name}"}, limit: ${props.qty}) {
         data {
@@ -25,10 +30,15 @@ const createQuery = (props: spaceXGQLtemplate) => {
       }`;
 };
 
+/**
+ *
+ * @param props Array of spaceXGQLtemplate Object
+ * @returns spaceXGQ Object. Alert will be raised for request errors.
+ */
 const fetchData = async (props: spaceXGQLtemplate[]) => {
   props.map((item) => {
     queryString += createQuery(item);
-  });
+  }); //Concatnates each alias request in the template to form a single query string
 
   const response = await fetch(endpoint, {
     method: 'POST',
@@ -37,6 +47,8 @@ const fetchData = async (props: spaceXGQLtemplate[]) => {
   });
   const data: spaceXGQL | undefined = await response.json();
   if (!response.ok || !data) {
+    // Checks if data is proper, if not, raise error
+    alert('Request error');
     throw new Error('Request error');
   }
   return data;

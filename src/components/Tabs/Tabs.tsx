@@ -7,6 +7,11 @@ type Props = {
   children?: ReactElement[];
 };
 
+/**
+ *
+ * @param children Array of ReactElements as children
+ * @returns Tabs component containing of a Tabbar and respective children tabs
+ */
 const Tabs = (props: Props) => {
   const [activeTab, setactiveTab] = useState(0);
 

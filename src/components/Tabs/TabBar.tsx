@@ -8,6 +8,13 @@ type Props = {
   setActive: (index: number) => void;
 };
 
+/**
+ *
+ * @param tabName String of tab name
+ * @param index Index of tab
+ * @param active Current active tab
+ * @returns Tabbar component
+ */
 const TabBar = (props: Props) => {
   const className = props.index == props.active ? 'tab-bar__items--active' : '';
 

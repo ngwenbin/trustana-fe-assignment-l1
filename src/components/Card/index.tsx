@@ -3,6 +3,11 @@ import { spaceXSitesData } from '../../common/types';
 import './styles.css';
 import spacexlogo from '../../assets/images/spacex.png';
 
+/**
+ *
+ * @param props spaceXSitesData
+ * @returns Card component displaying details
+ */
 const Card = (props: spaceXSitesData) => {
   return (
     <div className="card">

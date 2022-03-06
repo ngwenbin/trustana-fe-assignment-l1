@@ -1,43 +1,47 @@
 export interface MockItem {
-  prod_name: string;
-  img: string;
-  moq: number;
-  price: number;
-  unit: string;
+  /** Product name   */ prod_name: string;
+  /** Path of image   */ img: string;
+  /** MOQ number   */ moq: number;
+  /** Product price   */ price: number;
+  /** Product unit   */ unit: string;
 }
 
 export interface MockCatalog {
-  items: MockItem[];
-  prod_group: string;
+  /** Array of MockItem objects   */ items: MockItem[];
+  /** Name of catalog group   */ prod_group: string;
 }
 
 export interface MockData {
-  catalog_count: number;
-  catalog: MockCatalog[];
+  /** Total catalog count   */ catalog_count: number;
+  /** Array of MockCatalog objects   */ catalog: MockCatalog[];
 }
 
 export interface spaceXSitesData {
-  launch_date_unix: string;
-  mission_name: string;
-  rocket: { rocket_name: string };
-  launch_site: { site_name: string };
-  links: { flickr_images: [string | undefined] };
+  /** UNIX timestamp of launch   */ launch_date_unix: string;
+  /** Launch mission name   */ mission_name: string;
+  /** Rocket name   */ rocket: { rocket_name: string };
+  /** Launch site   */ launch_site: { site_name: string };
+  /** Object containing array of image urls */
+  links: {
+    flickr_images: [string | undefined];
+  };
 }
 
 export interface spaceXSite {
+  /** Array of spaceXSitesData   */
   data: spaceXSitesData[];
 }
 
 export interface spaceXGQL {
-  data: {
-    site1: spaceXSite;
-    site2: spaceXSite;
-    site3: spaceXSite;
-  };
+  /** Dynamic keys of spaceXSite objects   */
+  [data: string]: spaceXSite[];
 }
 
 export interface spaceXGQLtemplate {
+  /** Alias for Graphql identical requests   */
   alias: string;
+  /** Launch site name query*/
   site_name: string;
+  /** Limit of requests   */
   qty: number;
 }
