@@ -46,7 +46,6 @@ function App() {
           }
         })
       );
-      console.log(val);
       setgqlData(val);
       setisLoading(false);
     });

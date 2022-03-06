@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import Card from '../Card';
 import './styles.css';
 import Pagination from '../Pagination';
@@ -23,11 +23,6 @@ const Tab = (props: Props) => {
   const start_index = pagenum * props.max_items_page; // Calculates starting index to slice
   const last_index = start_index + props.max_items_page; // Calculates last index to slice
 
-  console.log('Tab render');
-  const changePage = useCallback((num: number) => {
-    setpageNum(num);
-  }, []);
-
   return (
     <div className="tab-body">
       <p className="tab-body__category">PAST SPACEX LAUNCHES</p>
@@ -45,7 +40,7 @@ const Tab = (props: Props) => {
         ))}
       </div>
       <div>
-        <Pagination pages={totalpages} onClick={changePage} active={pagenum} />
+        <Pagination pages={totalpages} onClick={setpageNum} active={pagenum} />
       </div>
     </div>
   );

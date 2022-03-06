@@ -16,7 +16,7 @@ type Props = {
  */
 const Pagination = (props: Props) => {
   const pages = [...Array(props.pages).keys()];
-  console.log('Pagination render');
+
   return (
     <div className="pagination">
       {pages.map((item, index) => (
